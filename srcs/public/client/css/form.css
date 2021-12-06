@@ -1,10 +1,10 @@
 /****Form****/
 
-#form {
+#formRes {
 padding-top: 3px;
 }
 
-#form input {
+#formRes input {
 	color:#263555;
 	 border: 1px solid #d4d0d0;
  padding: 4px 10px 6px;
@@ -19,7 +19,7 @@ padding-top: 3px;
 	-webkit-box-sizing: border-box; /* Safari */
 }
 
-#form textarea {
+#formRes textarea {
 	color:#263555;
 	height: 233px;
 	text-transform: uppercase;
@@ -39,7 +39,7 @@ padding-top: 3px;
 	margin: 0;
 	
 }
-#form label {
+#formRes label {
 	position:relative;
 	display: block;
 	min-height: 45px;
@@ -51,7 +51,7 @@ padding-top: 3px;
 
 
 
-#form .error, #form .empty {
+#formRes .error, #formRes .empty {
 	color: #FF0000;
 	display: none;
 	font-size: 11px;
@@ -65,7 +65,7 @@ padding-top: 3px;
 }
 
 
-#form .error-empty {
+#formRes .error-empty {
 	display:none;
 	float:left;
 }
@@ -89,12 +89,12 @@ padding-top: 3px;
 	margin-left: 18px !important;
 }
 
-#form .message {
+#formRes .message {
 	width: 100%;
 	margin-top: -3px;
 }
 
-#form .btns span {
+#formRes .btns span {
 	display: inline-block;
 	width: 13px;
 }
@@ -105,7 +105,7 @@ padding-top: 3px;
 	line-height: 0;
 }
 
-#form .success {
+#formRes .success {
 	text-transform: uppercase;
 	display: none;
 	position: absolute;
@@ -127,4 +127,38 @@ padding-top: 3px;
 
 .success_wrapper {
 	position: relative;	
+}
+
+.form-group{
+	margin: 5px;
+}
+.form-group input{
+		width: 80%;
+		height: 25px;
+		border: none;
+		/* border: 1px solid #000; */
+		border-radius: 3px;
+		box-shadow: 0 0 4px 0px rgba(0 ,0 ,0,0.5);
+}
+.form-group button{
+	margin: 10px;
+	border: none;
+	display: flex;
+	text-align: center;
+	background-color: #38afe5;
+	color: #fcfafa;
+	font-size: 15px;
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 10px;
+	position: relative
+}
+.form-group-footer{
+	display: flex;
+	justify-content: end;
+	width: 80%;
+}
+.btn-reserve{
+	position: absolute;
+	bottom: 10px;
 }

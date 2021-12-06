@@ -1,0 +1,111 @@
+{% extends 'fo/base.html.twig' %}
+
+{% block title %}Hello IndexController!
+{% endblock %}
+{% block stylesheet %}
+	<style type="text/css">
+		.form-group input {
+			width: 80%;
+			height: 25px;
+			border: none;
+			/* border: 1px solid #000; */
+			border-radius: 3px;
+			box-shadow: 0 0 4px 0 rgba(0 , 0 , 0, 0.5);
+		}
+	</style>
+{% endblock %}
+{% block body %}
+
+	<div class="content">
+
+		<div class="container_12">
+			<div class="container-previous">
+				<a href="{{path('index')}}" class="previous"></a>
+			</div>
+			<!-- <div class="grid_12">
+												
+												            <h3>Listes de nos chambres</h3>
+												        </div> -->
+		</div>
+
+		<div class="container_12">
+			<div class="grid_7">
+				<h3>{{logement.typelogement.name}}</h3>
+				<div class="map">
+					Prix :
+					{{logement.price}}
+				</br>
+				Nombre de client :
+				{{logement.price}}
+			</br>
+			Disponibilité :
+			{{logement.disponibility}}
+		</br>
+		Description :
+		<span style="overflow:hidden">{{logement.description}}</span>
+	</br>
+</div></div><div class="grid_5">
+
+<h3>Informations
+</h3>
+<form
+	id="" action="{{path('reservation' , {'id' : logement.id})}}" method="post">
+	<!-- <div class="success_wrapper">
+				                    <div class="success">Contact form submitted!<br>
+				                        <strong>We will be in touch soon.</strong> </div>
+				                </div> -->
+	<fieldset>
+		<div class="form-group">
+			<label class="name">Nom
+			</label><br>
+			<div>
+				<input type="text" name="name" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="label">Prénom
+			</label><br>
+			<input type="text" name="firstname" required>
+		</div>
+
+		<div class="form-group">
+			<label class="label">CIN
+			</label><br>
+			<div>
+				<input type="text" name="cin" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="label">Adresse
+			</label><br>
+			<div>
+				<input type="text" name="address" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="label">Date debut
+			</label><br>
+			<div>
+				<input type="date" name="dateStart" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="label">Date fin
+			</label><br>
+			<div>
+				<input type="date" name="dateEnd" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="form-group-footer">
+				<button type="submit">
+					Envoyer
+				</button>
+			</div>
+		</div>
+	</fieldset>
+</form></div><div class="clear"></div></div></div>{% endblock %}

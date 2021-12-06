@@ -460,6 +460,7 @@ a.gal:hover img {
 .content {
 	padding-top: 123px;
 	padding-bottom: 128px;
+	position: relative;
 }
 
 .page1 .content {
@@ -1065,3 +1066,27 @@ footer {
 #toTop:hover {
 	background-position: right 0;
 }
+
+.container-desc{
+	height: 300px;
+	overflow-y:auto !important;
+}
+
+.container-desc::-webkit-scrollbar {
+	width: 4px;
+  }
+  
+  /* Track */
+  .container-desc::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .container-desc::-webkit-scrollbar-thumb {
+	background: #193149; 
+  }
+  
+  /* Handle on hover */
+  .container-desc ::-webkit-scrollbar-thumb:hover {
+	background: #193149; 
+  }

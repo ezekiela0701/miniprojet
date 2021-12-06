@@ -70,7 +70,19 @@ a.prev, a.next {
 	bottom: 49px;
 	z-index: 999;
 	left: 45px;
+	/* top: 2px; */
 
+}
+a.previous{
+	width: 56px;
+	background: url(../images/prevnext.png) 0 0 no-repeat;
+	height: 112px;
+	position: absolute;
+	display: block;
+	bottom: 49px;
+	z-index: 999;
+	left: 45px;
+	top: 10px;
 }
 
 a.next {

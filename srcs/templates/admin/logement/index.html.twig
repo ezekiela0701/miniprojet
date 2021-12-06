@@ -34,6 +34,8 @@
                 <tr>
                     <th>Type</th>
                     <th>Prix</th>
+                    <th>Nombre de clients</th>
+                    <th>Description</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -43,6 +45,8 @@
                     <tr>
                         <td>{{logementList.typelogement.name}}</td>
                         <td>{{logementList.price}}</td>
+                        <td>{{logementList.numberclient}}</td>
+                        <td>{{logementList.description}}</td>
                         <td>
                             {{ include('admin/components/block/status.html.twig', { 'etat_status': logementList.status}) }}
                         </td>

@@ -52,6 +52,16 @@ class Logement
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $disponibility;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -137,6 +147,30 @@ class Logement
     public function setStatus(?bool $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getDisponibility(): ?bool
+    {
+        return $this->disponibility;
+    }
+
+    public function setDisponibility(?bool $disponibility): self
+    {
+        $this->disponibility = $disponibility;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

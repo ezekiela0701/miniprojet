@@ -42,19 +42,19 @@ class LogementController extends AbstractController
     {
         if(!$logement){
             $logement = new Logement();
+            $logement->setDisponibility(true) ;
+
         }
 
         $form = $this->createForm(LogementType::class, $logement);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-
             $this->em->persist($logement);
             $this->em->flush();
 
             return $this->redirectToRoute('logement.list');
 
         }
-
 
         return $this->render('admin/logement/add.html.twig', [
             'controller_name' => 'LogementController',
